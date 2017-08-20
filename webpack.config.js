@@ -52,7 +52,14 @@ module.exports = {
      */
     new HtmlWebpackPlugin({
       template: 'src/index.html'
+    }),
+    /**
+     * this is used to defined windows scope varibles
+     */
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
+
 
   ]
 };
